@@ -6,35 +6,34 @@
   <title> Franklin, ID| Weather</title>
   <meta name="description" content="Franklin, ID Weather">
   <meta name="viewport" content="width=device-width">
-  <link href="screen.css" rel="stylesheet" type="text/css" media="screen">
-</head>
+  <link href="/weather/css/screen.css" rel="stylesheet" type="text/css" media="screen">
+</head>  
 
 <body>
-  <nav> <a href="https://duckwispper.github.io/" title="Go to Home Page">Home</a></nav>
   <header>
-    <img src="images/logo.jpg" alt="Logo">
-    <h1><strong>The Weather Site</strong></h1>
+    <img id="logo" src="images/logo.jpg" alt="Logo">
+    <h1 id="heading"><strong> The Weather Site</strong></h1>
   </header>
   <main>
     <h1><strong>Franklin, Idaho</strong></h1>
-    <p><strong>Zip: </strong>83237</p>
-    <p><strong>Elevation: </strong>1514.246</p>
-    <p><strong>Location: </strong>42.07&deg; N, 111.79&deg; W</p>
+    <p class="info"><strong>Zip: </strong>83237</p>
+    <p class="info"><strong>Elevation: </strong>1514.246</p>
+    <p class="info"><strong>Location: </strong>42.07&deg; N, 111.79&deg; W</p>
     <section>
-      <h2>Temperature</h2>
+      <h2 id="temp">Temperature</h2>
       <h2><strong>41&deg;F</strong></h2>
       <p>64&deg;F 41&deg;F </p>
       <p>Feels Like 40&deg;F</p>
     </section>
     <section>
-      <h2>Wind</h2>
+      <h2 id="wind">Wind</h2>
       <img src="images/wind-pointer.png" alt="Wind Pointer">
       <p>5 mph</p>
       <p><strong>Direction: </strong>SW</p>
       <p><strong>Gusts: </strong>10-12 mph</p>
     </section>
     <section>
-      <h2>Rain</h2>
+      <h2 id="weather_type">Rain</h2>
       <img src="images/rain.jpg" alt="Rain">
     </section>
     <section>
@@ -55,7 +54,7 @@
         <li>10pm: 55&deg;F</li>
       </ul>
     </section>
-    <p>&copy; 2019 &mdash; The Weather Site</p>
+    <p id="copy">&copy; 2019 &mdash; The Weather Site</p>
   </main>
   <footer>
     <ul>

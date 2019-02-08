@@ -23,3 +23,27 @@ body{
     font-size: 1.5em;
     font-family: Helvetica, Arial, sans-serif;
 }
+
+head{
+    display: inline;
+}
+
+footer{
+    background-color: #0e89d5;
+}
+
+#logo{
+    float: left;
+    height: 2.25em;
+    width: 2.25em;
+}
+#heading{
+    display: inline;
+}
+#copy{
+    background-color: #0e89d5;
+}
+
+.info{
+    display: inline;
+}
