@@ -57,14 +57,17 @@ nav {
 
 }
 
+a{
+    color: FFF;
+}
+
 /* display the nav's and move them into the middle of the page */
 .webs {
     display: inline;
     margin-right: 10px;
     margin-left: 10px;
-    color: FFF;
 }
-}
+
 
 /* to stop current from moving left like the rest of the nav */
 #cur {
