@@ -78,8 +78,12 @@ nav {
 
 #forcast {
     margin-bottom: 5px;
+    height: 10em;
 }
 
+#time {
+    display: inline;
+}
 
 #frank {
     margin-bottom: 0px;
@@ -99,6 +103,12 @@ nav {
     color: blue;
 }
 
+#speed{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .info {
     display: inline;
     font-size: 16px;
@@ -116,4 +126,16 @@ nav {
     display: inline;
     margin-right: 10px;
     margin-left: 10px;
+}
+ 
+.image {
+    position: relative;
+}
+
+.time {
+    display: inline;
+}
+
+.scroll{
+    overflow: auto;
 }
