@@ -112,7 +112,7 @@ nav {
 /* position the 5mph in the picture */
 #speed {
     position: absolute;
-    top: %;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
