@@ -56,7 +56,9 @@ nav {
     height: 50px;
 
 }
-
+a{
+    color: FFF;
+}
 /* display the nav's and move them into the middle of the page */
 .webs {
     display: inline;
