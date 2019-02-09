@@ -52,6 +52,11 @@ nav {
     
 }
 
+#scroll{
+    white-space: nowrap;
+    overflow: auto;
+}
+
 #logo {
     float: left;
     height: 2.25em;
@@ -78,7 +83,7 @@ nav {
 
 #forcast {
     margin-bottom: 5px;
-    height: 10em;
+    height: auto;
 }
 
 #time {
@@ -134,8 +139,4 @@ nav {
 
 .time {
     display: inline;
-}
-
-.scroll{
-    overflow: auto;
 }
