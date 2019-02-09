@@ -62,8 +62,11 @@ nav {
     margin-right: 10px;
     margin-left: 10px;
 }
-
-
+/* change only The Weather Sites text */
+#site-brand {
+    font-size: 1.7em;
+    font-weight: 600;
+}
 /* to stop current from moving left like the rest of the nav */
 #cur {
     margin-left: -10px !important;
@@ -102,59 +105,43 @@ nav {
     margin-top: 3px;
     margin-bottom: 10px;
 }
-
-#direction {
-    margin-top: 1px;
+/* position the image */
+.image {
+    position: relative;
 }
-
-#scroll {
-    white-space: nowrap;
-    overflow: auto;
-}
-
-#logo {
-    float: left;
-    height: 1.9em;
-    width: 2em;
-}
-
-#copy {
-    background-color: #0e89d5;
-}
-
-#site-brand {
-    font-size: 1.7em;
-    font-weight: 600;
-}
-
-#rain {
-    height: 10em;
-    width: 10em;
-}
-
-#forcast {
-    margin-bottom: 5px;
-    height: auto;
-}
-
-#time {
-    display: inline;
-}
-
+/* position the 5mph in the picture */
 #speed {
     position: absolute;
-    top: 50%;
+    top: %;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.image {
-    position: relative;
+/* align the direction text */
+#direction {
+    margin-top: 1px;
+    margin-bottom: -20px;
 }
-
+/* align the gusts text */
+#gust {
+    margin-bottom: 0px;
+}
+/* change the hourly forcast margins and height */
+#forcast {
+    margin-bottom: 5px;
+    height: auto;
+}
+/* display the time and weather in a line with a scroll bar */
+#scroll {
+    white-space: nowrap;
+    overflow: auto;
+}
+/* display the time and weather inline for the overflow */
 .time {
     display: inline;
-
+}
+#copy {
+    background-color: #0e89d5;
 }
 
 /* Mobile First rules */
@@ -163,7 +150,12 @@ nav {
 #phone {
     width: 500px;
 }
-
+/* changes the size and position of the logo */
+#logo {
+    float: left;
+    height: 1.9em;
+    width: 2em;
+}
 /* create the tiles and how they act on the page */
 .tile {
     background-color: rgba(200, 200, 200, .6);
@@ -171,4 +163,9 @@ nav {
     border: 1px solid;
     border-radius: 15px;
     text-align: center;
+}
+/* change the size of the picture in phones */
+#rain {
+    height: 10em;
+    width: 10em;
 }
