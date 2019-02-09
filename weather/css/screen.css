@@ -11,39 +11,109 @@
 @import url('normalize.css');
 
 /* Section 2 - General Rules */
-header{
+html {
+    box-sizing: border-box;
+   }
+    *, *:before, *:after{
+    box-sizing: inherit;
+   }
+header {
     background-color: #0e89d5;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6 {
     font-family: 'Sansita', sans-serif;
 }
 
-body{
+body {
     font-size: 1.5em;
     font-family: Helvetica, Arial, sans-serif;
+    height: auto;
+    width: 500px;
 }
 
-head{
+head {
     display: inline;
 }
 
-footer{
+footer {
     background-color: #0e89d5;
+    margin-bottom: 2em;
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+nav {
+    background-color: #0e89d5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: 50px;
+    
 }
 
-#logo{
+#logo {
     float: left;
     height: 2.25em;
     width: 2.25em;
 }
-#heading{
-    display: inline;
-}
-#copy{
+
+#copy {
     background-color: #0e89d5;
 }
 
-.info{
+#site-brand {
+    font-size: 1.7em;
+    font-weight: 600;
+  }
+#rain {
+    height: 10em;
+    width: 10em;
+    float: center;    
+}
+
+#cur {
+    margin-left: -10px !important;
+}
+
+#forcast {
+    margin-bottom: 5px;
+}
+
+
+#frank {
+    margin-bottom: 0px;
+}
+
+#main_temp {
+    font-size: 85px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#hot {
+    color: red;
+}
+
+#cold {
+    color: blue;
+}
+
+.info {
     display: inline;
+    font-size: 16px;
+}
+
+.tile {
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.webs {
+    display: inline;
+    margin-right: 10px;
+    margin-left: 10px;
 }

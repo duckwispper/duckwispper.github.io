@@ -7,36 +7,50 @@
   <meta name="description" content="Franklin, ID Weather">
   <meta name="viewport" content="width=device-width">
   <link href="/weather/css/screen.css" rel="stylesheet" type="text/css" media="screen">
-</head>  
+</head>
 
 <body>
-  <header>
+
+  <header id="page_header">
     <img id="logo" src="images/logo.jpg" alt="Logo">
-    <h1 id="heading"><strong> The Weather Site</strong></h1>
+    <p id="site-brand">The Weather Site</p>
   </header>
+  
+  <nav>
+    <ul>
+      <li id="cur" class="webs"><a href="#" title="Go to the Weather Site home page">Current</a></li>
+      <li class="webs"><a href="#" title="Search Places">Search</a></li>
+      <li class="webs"><a href="#" title="Franklin Weather">Franklin</a></li>
+      <li class="webs"><a href="#" title="Greenville Weather">Greenville</a></li>
+    </ul>
+  </nav>
+  
   <main>
-    <h1><strong>Franklin, Idaho</strong></h1>
-    <p class="info"><strong>Zip: </strong>83237</p>
-    <p class="info"><strong>Elevation: </strong>1514.246</p>
+    <h1 id="frank"><strong>Franklin, Idaho</strong></h1>
+    <p class="info"><strong>Zip: </strong>83237 |</p>
+    <p class="info"><strong>Elevation: </strong>1514.246 ft. |</p>
     <p class="info"><strong>Location: </strong>42.07&deg; N, 111.79&deg; W</p>
-    <section>
-      <h2 id="temp">Temperature</h2>
-      <h2><strong>41&deg;F</strong></h2>
-      <p>64&deg;F 41&deg;F </p>
+  
+    <section id="localinfo" class="tile">
+      <h2>Temperature</h2>
+      <p id="main_temp">41&deg;F</p>
+      <p><span id="hot">64&deg;F</span><span id="cold"> 41&deg;F</span> </p>
       <p>Feels Like 40&deg;F</p>
     </section>
-    <section>
-      <h2 id="wind">Wind</h2>
+  
+    <section id="wind" class="tile">
+      <h2>Wind</h2>
       <img src="images/wind-pointer.png" alt="Wind Pointer">
       <p>5 mph</p>
       <p><strong>Direction: </strong>SW</p>
       <p><strong>Gusts: </strong>10-12 mph</p>
     </section>
-    <section>
-      <h2 id="weather_type">Rain</h2>
-      <img src="images/rain.jpg" alt="Rain">
+    
+    <section id="summary" class="tile">
+      <h2 id="condition">Rain</h2>
+      <img id="rain" src="images/rain.jpg" alt="Rain">
     </section>
-    <section>
+    <section id="forcast" class="tile">
       <h2>Hourly Forcast</h2>
       <ul>
         <li>10am: 41&deg;F</li>
@@ -54,15 +68,9 @@
         <li>10pm: 55&deg;F</li>
       </ul>
     </section>
-    <p id="copy">&copy; 2019 &mdash; The Weather Site</p>
   </main>
   <footer>
-    <ul>
-      <li><a href="#" title="Go to the Weather Site home page">Current</a></li>
-      <li><a href="#" title="Search Places">Search</a></li>
-      <li><a href="#" title="Franklin Weather">Franklin</a></li>
-      <li><a href="#" title="Greenville Weather">Greenville</a></li>
-    </ul>
+    <p id="copy">&copy; 2019 &mdash; The Weather Site</p>
   </footer>
 </body>
 
