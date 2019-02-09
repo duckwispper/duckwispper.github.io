@@ -53,14 +53,14 @@ nav {
     bottom: 0;
     left: 0;
     width: 500px;
-    height: 50px;
+    height: 45px;
 }
 
 /* display the nav's and move them into the middle of the page */
 .webs {
     display: inline;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 /* change only The Weather Sites text */
 #site-brand {
@@ -68,10 +68,13 @@ nav {
     font-weight: 600;
 }
 /* to stop current from moving left like the rest of the nav */
-#cur {
-    margin-left: -10px !important;
+#current {
+    margin-left: -15px !important;
 }
-
+/* to stop grrenville from moving right like the rest of the nav */
+#greenville {
+    margin-right: -15px !important;
+}
 /* remove the margin so the text is closer */
 #frank {
     margin-bottom: 0px;
@@ -143,10 +146,6 @@ nav {
 #copy {
     background-color: #0e89d5;
 }
-nav a:link {
-    color: #ffffff;
-    text-decoration: none;
-}
 /* Mobile First rules */
 
 /* change the size of the page to fit on a phone */
@@ -172,3 +171,11 @@ nav a:link {
     height: 10em;
     width: 10em;
 }
+/* change the style of the nav bar */
+#nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* 4 Larger Screen Rules */
