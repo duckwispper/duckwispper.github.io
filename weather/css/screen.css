@@ -13,12 +13,17 @@
 /* Section 2 - General Rules */
 html {
     box-sizing: border-box;
-   }
-    *, *:before, *:after{
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-   }
+}
+
 header {
     background-color: #0e89d5;
+    margin-bottom: -35px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -29,7 +34,6 @@ body {
     font-size: 1.5em;
     font-family: Helvetica, Arial, sans-serif;
     height: auto;
-    width: 500px;
 }
 
 head {
@@ -39,9 +43,10 @@ head {
 footer {
     background-color: #0e89d5;
     margin-bottom: 2em;
-    margin-top: 0px;
+    margin-top: -20px;
     margin-bottom: 60px;
 }
+
 nav {
     background-color: #0e89d5;
     position: fixed;
@@ -49,18 +54,70 @@ nav {
     left: 0;
     width: 500px;
     height: 50px;
-    
+
 }
 
-#scroll{
+/* display the nav's and move them into the middle of the page */
+.webs {
+    display: inline;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: FFF;
+}
+}
+
+/* to stop current from moving left like the rest of the nav */
+#cur {
+    margin-left: -10px !important;
+}
+
+/* remove the margin so the text is closer */
+#frank {
+    margin-bottom: 0px;
+}
+
+/* display the zip, elevation, and location in line and sized. */
+.info {
+    display: inline;
+    font-size: 16px;
+}
+
+/* change the temperature size and spacing */
+#main_temp {
+    font-size: 85px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* change the color of the high  */
+#hot {
+    color: red;
+}
+
+/* change the color of the low */
+#cold {
+    color: blue;
+}
+
+/* align the wind text */
+#wind {
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+#direction {
+    margin-top: 1px;
+}
+
+#scroll {
     white-space: nowrap;
     overflow: auto;
 }
 
 #logo {
     float: left;
-    height: 2.25em;
-    width: 2.25em;
+    height: 1.9em;
+    width: 2em;
 }
 
 #copy {
@@ -70,15 +127,12 @@ nav {
 #site-brand {
     font-size: 1.7em;
     font-weight: 600;
-  }
+}
+
 #rain {
     height: 10em;
     width: 10em;
-    float: center;    
-}
-
-#cur {
-    margin-left: -10px !important;
+    float: center;
 }
 
 #forcast {
@@ -90,53 +144,34 @@ nav {
     display: inline;
 }
 
-#frank {
-    margin-bottom: 0px;
-}
-
-#main_temp {
-    font-size: 85px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-#hot {
-    color: red;
-}
-
-#cold {
-    color: blue;
-}
-
-#speed{
+#speed {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.info {
-    display: inline;
-    font-size: 16px;
-}
 
-.tile {
-    background-color: rgba(200,200,200,.6);
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.webs {
-    display: inline;
-    margin-right: 10px;
-    margin-left: 10px;
-}
- 
 .image {
     position: relative;
 }
 
 .time {
     display: inline;
+
+}
+
+/* Mobile First rules */
+
+/* change the size of the page to fit on a phone */
+#phone {
+    width: 500px;
+}
+
+/* create the tiles and how they act on the page */
+.tile {
+    background-color: rgba(200, 200, 200, .6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    text-align: center;
 }
