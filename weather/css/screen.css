@@ -44,7 +44,7 @@ footer {
     background-color: #0e89d5;
     margin-bottom: 2em;
     margin-top: -20px;
-    margin-bottom: 60px;
+    margin-bottom: 72px;
 }
 
 nav {
@@ -54,6 +54,7 @@ nav {
     left: 0;
     width: 500px;
     height: 45px;
+    padding-bottom: 65px;
 }
 
 /* display the nav's and move them into the middle of the page */
@@ -138,6 +139,7 @@ nav {
 #scroll {
     white-space: nowrap;
     overflow: auto;
+    
 }
 /* display the time and weather inline for the overflow */
 .time {
@@ -176,6 +178,7 @@ nav {
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
+
 }
 
 /* 4 Larger Screen Rules */
