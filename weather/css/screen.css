@@ -174,7 +174,7 @@ nav {
     width: 10em;
 }
 /* change the style of the nav bar */
-#nav a {
+#page_nav a {
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
