@@ -9,7 +9,7 @@
   <link href="/weather/css/screen.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
-<body id="phone">
+<body id="page_body">
 
   <header id="page_header">
     <img id="logo" src="images/logo.jpg" alt="Logo">
@@ -17,11 +17,11 @@
   </header>
   
   <nav id="page_nav">
-    <ul>
-      <li id="current" class="webs"><a href="#" title="Go to the Weather Site home page">Current</a></li>
-      <li class="webs"><a href="#" title="Search Places">Search</a></li>
-      <li class="webs"><a href="#" title="Franklin Weather">Franklin</a></li>
-      <li id="greenville" class="webs"><a href="#" title="Greenville Weather">Greenville</a></li>
+    <ul id="nav_list">
+      <li><a href="#" title="Go to the Weather Site home page">Current</a></li>
+      <li><a href="#" title="Search Places">Search</a></li>
+      <li><a href="#" title="Franklin Weather">Franklin</a></li>
+      <li><a href="#" title="Greenville Weather">Greenville</a></li>
     </ul>
   </nav>
   
@@ -30,7 +30,7 @@
     <p class="info"><strong>Zip: </strong>83237 |</p>
     <p class="info"><strong>Elevation: </strong>1514.246 ft. |</p>
     <p class="info"><strong>Location: </strong>42.07&deg; N, 111.79&deg; W</p>
-  
+  <div class="box">
     <section class="tile">
       <h2>Temperature</h2>
       <p id="main_temp">41&deg;F</p>
@@ -52,22 +52,23 @@
       <h2>Rain</h2>
       <img id="rain" src="images/rain.jpg" alt="Rain">
     </section>
+    </div>
     <section id="forcast" class="tile">
       <h2>Hourly Forcast</h2>
       <ul id="scroll">
-        <li class="time">10am: 41&deg;F |</li>
-        <li class="time">11am: 41&deg;F |</li>
-        <li class="time">12pm: 41&deg;F |</li>
-        <li class="time">1pm: 41&deg;F |</li>
-        <li class="time">2pm: 41&deg;F |</li>
-        <li class="time">3pm: 41&deg;F |</li>
-        <li class="time">4pm: 42&deg;F |</li>
-        <li class="time">5pm: 44&deg;F |</li>
-        <li class="time">6pm: 44&deg;F |</li>
-        <li class="time">7pm: 46&deg;F |</li>
-        <li class="time">8pm: 49&deg;F |</li>
-        <li class="time">9pm: 51&deg;F |</li>
-        <li class="time">10pm: 55&deg;F</li>
+        <li>10am: 41&deg;F |</li>
+        <li>11am: 41&deg;F |</li>
+        <li>12pm: 41&deg;F |</li>
+        <li>1pm: 41&deg;F |</li>
+        <li>2pm: 41&deg;F |</li>
+        <li>3pm: 41&deg;F |</li>
+        <li>4pm: 42&deg;F |</li>
+        <li>5pm: 44&deg;F |</li>
+        <li>6pm: 44&deg;F |</li>
+        <li>7pm: 46&deg;F |</li>
+        <li>8pm: 49&deg;F |</li>
+        <li>9pm: 51&deg;F |</li>
+        <li>10pm: 55&deg;F</li>
       </ul>
     </section>
   </main>

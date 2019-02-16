@@ -52,29 +52,20 @@ nav {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 500px;
+    width: 100%;
     height: 45px;
     padding-bottom: 65px;
-}
-
-/* display the nav's and move them into the middle of the page */
-.webs {
-    display: inline;
-    margin-right: 20px;
-    margin-left: 20px;
 }
 /* change only The Weather Sites text */
 #site-brand {
     font-size: 1.7em;
     font-weight: 600;
 }
-/* to stop current from moving left like the rest of the nav */
-#current {
-    margin-left: -15px !important;
-}
-/* to stop grrenville from moving right like the rest of the nav */
-#greenville {
-    margin-right: -15px !important;
+
+#nav_list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
 }
 /* remove the margin so the text is closer */
 #frank {
@@ -137,23 +128,17 @@ nav {
 }
 /* display the time and weather in a line with a scroll bar */
 #scroll {
+    display: flex;
     white-space: nowrap;
     overflow: auto;
-    
+    list-style-type: none;    
 }
-/* display the time and weather inline for the overflow */
-.time {
-    display: inline;
-}
+
 #copy {
     background-color: #0e89d5;
 }
 /* Mobile First rules */
 
-/* change the size of the page to fit on a phone */
-#phone {
-    width: 500px;
-}
 /* changes the size and position of the logo */
 #logo {
     float: left;
@@ -178,7 +163,25 @@ nav {
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
-
+    display: inline-flex;
+    overflow: auto;
 }
 
 /* 4 Larger Screen Rules */
+@media screen and (min-width: 700px){
+    nav {
+        position: relative;
+        background-color: #0e89d5;
+        width: 100%;
+        height: 45px;
+        top: -10px;
+    }
+    .box {
+        display: flex;
+        width: 50%;
+    }
+    #logo {
+        width: 60px;
+        height: 60px;
+    }
+}
