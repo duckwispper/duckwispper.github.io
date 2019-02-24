@@ -1,0 +1,37 @@
+/* This is the stylesheet for the Weather site */
+
+/* Table of Contents
+1. Imports
+2. General rules
+3. Mobile First rules
+4. Larger screen rules */
+
+/* Section 1 - Imports */
+/* Section 2 - General rules */
+ul{
+    list-style: square;
+}
+
+h1{
+    text-align: center;
+}
+
+figure{
+        padding:15px;
+        border:1px solid #021a40;
+}
+
+/* 3. Mobile First rules */
+@media screen and (max-width: 800px){
+    .large{
+        display: none;
+    }
+}
+
+
+/* 4. Larger screen rules */
+@media screen and (min-width: 800px){
+    .small{
+        display: none;
+    }
+}
