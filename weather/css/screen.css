@@ -1,186 +1,253 @@
-/* This is the stylesheet for the Weather site */
+/* This is the stylesheet for the weather site */
 
 /* Table of Contents
-1. Imports
-2. General rules
-3. Mobile First rules
-4. Larger screen rules */
+1.Imports
+2.General 
+3.Mobile First Rules
+4.Larger Screen Rules */
 
-/* Section 1 - Imports */
+/* Section 1 -imports */
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 @import url('normalize.css');
 
-/* Section 2 - General Rules */
+/* Section 2 General Rules */
+header {
+    background-color: #0e89d5;
+}
+
+header h1 {
+    display: inline;
+}
+
 html {
     box-sizing: border-box;
 }
 
-*,
-*:before,
+
+*before,
 *:after {
     box-sizing: inherit;
 }
 
-header {
-    background-color: #0e89d5;
-    margin-bottom: -35px;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Sansita', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "sansita", "eurostyle", sans-serif;
 }
 
 body {
-    font-size: 1.5em;
-    font-family: Helvetica, Arial, sans-serif;
-    height: auto;
+    font-size: 20px;
+    font-family: helvetica, verdana, sans-serif;
+    margin: 5px;
+
 }
 
-head {
-    display: inline;
-}
-
-footer {
-    background-color: #0e89d5;
-    margin-bottom: 2em;
-    margin-top: -20px;
-    margin-bottom: 72px;
-}
-
-nav {
-    background-color: #0e89d5;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 45px;
-    padding-bottom: 65px;
-}
-/* change only The Weather Sites text */
-#site-brand {
-    font-size: 1.7em;
-    font-weight: 600;
-}
-
-#nav_list {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-}
-/* remove the margin so the text is closer */
-#frank {
-    margin-bottom: 0px;
-}
-
-/* display the zip, elevation, and location in line and sized. */
-.info {
-    display: inline;
-    font-size: 16px;
-}
-
-/* change the temperature size and spacing */
-#main_temp {
-    font-size: 85px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-/* change the color of the high  */
-#hot {
-    color: red;
-}
-
-/* change the color of the low */
-#cold {
-    color: blue;
-}
-
-/* align the wind text */
-#wind {
-    margin-top: 3px;
-    margin-bottom: 10px;
-}
-/* position the image */
-.image {
-    position: relative;
-}
-/* position the 5mph in the picture */
-#speed {
-    position: absolute;
-    top: 28%;
-    left: 37%;
-}
-
-/* align the direction text */
-#direction {
-    margin-top: 1px;
-    margin-bottom: -20px;
-}
-/* align the gusts text */
-#gust {
-    margin-bottom: 0px;
-}
-/* change the hourly forcast margins and height */
-#forcast {
-    margin-bottom: 5px;
-    height: auto;
-}
-/* display the time and weather in a line with a scroll bar */
-#scroll {
-    display: flex;
-    white-space: nowrap;
-    overflow: auto;
-    list-style-type: none;    
-}
-
-#copy {
-    background-color: #0e89d5;
-}
-/* Mobile First rules */
-
-/* changes the size and position of the logo */
-#logo {
-    float: left;
-    height: 1.9em;
-    width: 2em;
-}
-/* create the tiles and how they act on the page */
+/* change how the tiles act */
 .tile {
     background-color: rgba(200, 200, 200, .6);
-    margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
     text-align: center;
 }
-/* change the size of the picture in phones */
-#rain {
-    height: 10em;
-    width: 10em;
-}
-/* change the style of the nav bar */
-#page_nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-    display: inline-flex;
-    overflow: auto;
+
+/* display the logo */
+#logo {
+    float: left;
+    height: 45px;
+    padding-right: 1%;
 }
 
-/* 4 Larger Screen Rules */
-@media screen and (min-width: 700px){
+/* make the nav stay at the top */
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    list-style: none;
+    background-color: #0e89d5;
+    width: 100%;
+}
+
+#page-nav {
+    display: flex;
+    justify-content: space-around
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    margin-bottom: 2em;
+    background-color: #0e89d5;
+    padding: 20px;
+}
+
+#scroll {
+    display: flex;
+    white-space: nowrap;
+    overflow: auto;
+    list-style-type: none;
+}
+
+#site-brand {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#rain {
+    width: 300px;
+    height: 188px;
+    background-size: contain;
+    align-self: center;
+    background-repeat: no-repeat;
+}
+
+#current {
+    font-size: 5em;
+}
+
+/* change the colors of the high and low */
+#hot {
+    color: red;
+}
+
+#cold {
+    color: blue;
+}
+
+#curWeather {
+    background-size: cover;
+}
+
+#hourly {
+    display: flex;
+}
+
+#dial {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background: no-repeat center/85%url(/weather/images/wind-pointer.png);
+    z-index: 100;
+    margin: -.6em auto 0;
+}
+
+.n {
+    transform: rotate(0deg)
+}
+
+.ne {
+    transform: rotate(45deg)
+}
+
+.nw {
+    transform: rotate(315deg)
+}
+
+.e {
+    transform: rotate(90deg)
+}
+
+.s {
+    transform: rotate(180deg)
+}
+
+.se {
+    transform: rotate(135deg)
+}
+
+.sw {
+    transform: rotate(225deg)
+}
+
+.w {
+    transform: rotate(270deg)
+}
+
+
+/* Mobile First Rules */
+
+.mph {
+    position: absolute;
+    top: 100%;
+    left: 40%;
+}
+
+/* The small pictures for the summary */
+.clear {
+    background-image: url("/weather/responsive_images/clear_small.jpg");
+}
+
+.rain {
+    background-image: url("/weather/responsive_images/rain_small.jpg");
+}
+
+.fog {
+    background-image: url("/weather/responsive_images/fog_small.jpg");
+}
+
+.snow {
+    background-image: url("/weather/responsive_images/snow_small.jpg");
+}
+
+.clouds {
+    background-image: url("/weather/responsive_images/clouds_small.jpg");
+}
+
+
+/* Large Screen Rules */
+@media only screen and (min-width: 700px) {
     nav {
         position: relative;
-        background-color: #0e89d5;
-        width: 100%;
-        height: 45px;
-        top: -10px;
     }
-    .box {
+
+    #page-nav {
         display: flex;
-        width: 50%;
+        justify-content: space-around;
+        padding-top: 25px;
+        padding-bottom: 15px;
     }
-    #logo {
-        width: 60px;
-        height: 60px;
+
+    .tile {
+        flex-grow: 1;
     }
+
+    .box {
+
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .mph {
+        position: absolute;
+        top: 55%;
+        left: 45%;
+    }
+
+}
+
+/* Summary images for the big screen */
+.clear {
+    background-image: url("/weather/responsive_images/clear_large.jpg");
+}
+
+.rain {
+    background-image: url("/weather/responsive_images/rain_large.jpg");
+}
+
+.fog {
+    background-image: url("/weather/responsive_images/fog_large.jpg");
+}
+
+.snow {
+    background-image: url("/weather/responsive_images/snow_large.jpg");
+}
+
+.clouds {
+    background-image: url("/weather/responsive_images/clouds_large.jpg");
 }

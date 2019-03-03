@@ -2,79 +2,79 @@
 <html lang="en-us">
 
 <head>
-  <meta charset="UTF-8">
-  <title> Franklin, ID| Weather</title>
-  <meta name="description" content="Franklin, ID Weather">
-  <meta name="viewport" content="width=device-width">
-  <link href="/weather/css/screen.css" rel="stylesheet" type="text/css" media="screen">
+    <meta charset="UTF-8">
+    <title>Franklin, ID | Weather Site</title>
+    <meta name="Franklin Weather" content="Weather in Franklin Idaho">
+    <meta name="viewport" content="width=device-width">
+    <link href="/weather/css/screen.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
-<body id="page_body">
+<body>
+    <header id="page-header">
+        <img id="logo" src="/weather/images/logo.jpg" alt="Picture of Umbrella" />
+        <h1 id="site-brand">The Weather Site</h1>
+    </header>
+    <nav id="page-nav">
+        <a href="#" title="Go to the Weather Site home page">Current</a>
+        <a href="#" title="Get Weather of Franklin">Franklin</a>
+        <a href="#" title="Get Weather of Greenville">Greenville</a>
+        <a href="#" title="Search">Search</a>
+    </nav>
+    <main id="page-content">
+        <section>
+            <h1>Franklin, Idaho</h1>
+            <p id='elev'><strong>Zip: </strong>83237 |&nbsp; <strong>Elevation:&nbsp; </strong><span id='elevation'>1514.246</span>
+                ft. |&nbsp; <strong>Location: &nbsp;</strong>42.07&#176; N, 111.97&#176; W</p>
+        </section>
+        <div id="curWeather"></div>
+        <section class="box">
 
-  <header id="page_header">
-    <img id="logo" src="images/logo.jpg" alt="Logo">
-    <p id="site-brand">The Weather Site</p>
-  </header>
-  
-  <nav id="page_nav">
-    <ul id="nav_list">
-      <li><a href="#" title="Go to the Weather Site home page">Current</a></li>
-      <li><a href="#" title="Search Places">Search</a></li>
-      <li><a href="#" title="Franklin Weather">Franklin</a></li>
-      <li><a href="#" title="Greenville Weather">Greenville</a></li>
-    </ul>
-  </nav>
-  
-  <main id="page_main">
-    <h1 id="frank"><strong>Franklin, Idaho</strong></h1>
-    <p class="info"><strong>Zip: </strong>83237 |</p>
-    <p class="info"><strong>Elevation: </strong>1514.246 ft. |</p>
-    <p class="info"><strong>Location: </strong>42.07&deg; N, 111.79&deg; W</p>
-  <div class="box">
-    <section class="tile">
-      <h2>Temperature</h2>
-      <p id="main_temp">41&deg;F</p>
-      <p><span id="hot">64&deg;F</span><span id="cold"> 41&deg;F</span> </p>
-      <p>Feels Like 40&deg;F</p>
-    </section>
-  
-    <section class="tile">
-      <h2 id="wind">Wind</h2>
-      <div class="image">
-      <img src="images/wind-pointer.png" alt="Wind Pointer">
-      <p id="speed">5mph</p>
-      </div>
-      <p id="direction"><strong>Direction: </strong>SW</p>
-      <p id="gust"><strong>Gusts: </strong>10-12 mph</p>
-    </section>
-    
-    <section class="tile">
-      <h2>Rain</h2>
-      <img id="rain" src="images/rain.jpg" alt="Rain">
-    </section>
-    </div>
-    <section id="forcast" class="tile">
-      <h2>Hourly Forcast</h2>
-      <ul id="scroll">
-        <li>10am: 41&deg;F |</li>
-        <li>11am: 41&deg;F |</li>
-        <li>12pm: 41&deg;F |</li>
-        <li>1pm: 41&deg;F |</li>
-        <li>2pm: 41&deg;F |</li>
-        <li>3pm: 41&deg;F |</li>
-        <li>4pm: 42&deg;F |</li>
-        <li>5pm: 44&deg;F |</li>
-        <li>6pm: 44&deg;F |</li>
-        <li>7pm: 46&deg;F |</li>
-        <li>8pm: 49&deg;F |</li>
-        <li>9pm: 51&deg;F |</li>
-        <li>10pm: 55&deg;F</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p id="copy">&copy; 2019 &mdash; The Weather Site</p>
-  </footer>
+            <section id="temps" class="tile">
+                <h3><strong>Temperature</strong></h3>
+
+                <p id="current">40&deg;F</p>
+                <p><span id="hot">64&deg;F</span> <span id="cold">41&deg;F</span></p>
+                <p id="feel">Feels Like <span id=feelTemp></span>&deg;F</p>
+
+            </section>
+
+            <section id="wind" class="tile">
+                <h3><strong>Wind</strong></h3>
+                <div id="dial"></div>
+                <div class="mph">
+                <p>5 mph</p>
+                </div>
+                <p>Direction:SW</p>
+                <p>Gusts:10-12</p>
+            </section>
+            <section id="summary" class="tile">
+                <h3><strong>Condition</strong></h3>
+                <img id='rain'>
+            </section>
+        </section>
+        <section class="tile">
+            <h2>Hourly Forecast</h2>
+            <ul id="scroll">
+                <li>10am: 41&deg;F |</li>
+                <li>11am: 41&deg;F |</li>
+                <li>12pm: 41&deg;F |</li>
+                <li>1pm: 41&deg;F |</li>
+                <li>2pm: 41&deg;F |</li>
+                <li>3pm: 41&deg;F |</li>
+                <li>4pm: 42&deg;F |</li>
+                <li>5pm: 44&deg;F |</li>
+                <li>6pm: 44&deg;F |</li>
+                <li>7pm: 46&deg;F |</li>
+                <li>8pm: 49&deg;F |</li>
+                <li>9pm: 51&deg;F |</li>
+                <li>10pm: 55&deg;F</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        &copy; 2019, The Weather Site
+    </footer>
+    <script src='/weather/javascript/functions.js'></script>
 </body>
 
 </html>
