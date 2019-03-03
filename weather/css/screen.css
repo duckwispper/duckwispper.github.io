@@ -15,27 +15,21 @@ header {
     background-color: #0e89d5;
 }
 
-header h1 {
-    display: inline;
-}
-
 html {
     box-sizing: border-box;
 }
 
 
-*before,
-*:after {
+*before, *:after {
     box-sizing: inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     font-family: "sansita", "eurostyle", sans-serif;
+}
+
+header h1 {
+    display: inline;
 }
 
 body {
