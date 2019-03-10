@@ -22,7 +22,7 @@ console.log("Feet: " + feet);
 setElevation(feet);
 
 //Current conditions function
-const condition = getCondition('clear');
+const condition = getCondition('Rain');
 changeSummaryImage(condition);
 
 //  This is to calculate the wind chill
@@ -47,8 +47,6 @@ function buildWC(speed, temp) {
     feelTemp.innerHTML = wc;
 
 }
-
-
 
 // Wind dial function
 function windDial(direction) {
@@ -103,14 +101,6 @@ function windDial(direction) {
     }
 }
 
-
-
-
-
-
-
-
-
 // Convert meters
 //this function will take meters and convert it to feet
 function convertMeters(meters) {
@@ -150,18 +140,92 @@ function getCondition(statement) {
         return condition;
 
     } else if (statement == 'raining' ||
+        statement == 'rain' ||
         statement == 'pouring' ||
         statement == 'precipitation' ||
         statement == 'wet') {
-        condition = 'rain'
+        condition = 'rain';
         return condition;
     } else{
-        condition = 'clear';
+        condition = 'clear' 
         return condition;
     }
 }
     //change the summary image function
-    function changeSummaryImage(condition){
-        document.getElementById('rain').setAttribute("class", condition);
+     function changeSummaryImage(condition){
+         document.getElementById('weather_c').setAttribute("class", condition);
         return 0;
+     }
+
+    function changeSummaryImage(weather) {
+        const weatherImages = weather;
+        switch (weather) {
+            case "clouds":
+            weather_c.setAttribute("class", "clouds");
+                curWeather.setAttribute("class", "clouds");
+                document.getElementById("weathertitle").innerText = "Clouds";
+                break;
+            case "rain":
+            weather_c.setAttribute("class", "rain");
+                curWeather.setAttribute("class", "rain");
+                document.getElementById("weathertitle").innerText = "Rain";
+                break;
+            case "clear":
+            weather_c.setAttribute("class", "clear");
+                curWeather.setAttribute("class", "clear");
+                document.getElementById("weathertitle").innerText = "Clear";
+                break;
+            case "snow":
+            weather_c.setAttribute("class", "snow");
+                curWeather.setAttribute("class", "snow");
+                document.getElementById("weathertitle").innerText = "Snow";
+                break;
+            case "fog":
+            weather_c.setAttribute("class", "fog");
+                curWeather.setAttribute("class", "fog");
+                document.getElementById("weathertitle").innerText = "Fog";
+                break;
+                
+    changeSummaryImage(weather);
+        }
     }
+    
+   
+
+    // Convert, Format time to 12 hour format
+function format_time(hour) {
+    if(hour > 23){ 
+     hour -= 24; 
+    } 
+    let amPM = (hour > 11) ? "pm" : "am"; 
+    if(hour > 12) { 
+     hour -= 12; 
+    } 
+    if(hour == 0) { 
+     hour = "12"; 
+    } 
+    return hour + amPM;
+   }
+
+
+   // Build the hourly temperature list
+function buildHourlyData(nextHour,hourlyTemps) {
+    // Data comes from a JavaScript object of hourly temp name - value pairs
+    // Next hour should have a value between 0-23
+    // The hourlyTemps variable holds an array of temperatures
+    // Line 8 builds a list item showing the time for the next hour 
+    // and then the first element (value in index 0) from the hourly temps array
+     let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
+     // Build the remaining list items using a for loop
+     for (let i = 1, x = hourlyTemps.length; i < x; i++) {
+      hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
+     }
+     console.log('HourlyList is: ' +hourlyListItems);
+     return hourlyListItems;
+    }
+
+
+    // Get the next hour based on the current time
+let date = new Date(); 
+let nextHour = date.getHours() + 1;
+

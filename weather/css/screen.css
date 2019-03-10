@@ -20,9 +20,9 @@ html {
 }
 
 
-*, *:before, *:after{
+*,*:before,*:after {
     box-sizing: inherit;
-   }
+}
 
 h1,h2,h3,h4,h5,h6 {
     font-family: "sansita", "eurostyle", sans-serif;
@@ -81,6 +81,9 @@ footer {
     padding: 20px;
 }
 
+li {
+    display: inline;
+}
 #scroll {
     display: flex;
     white-space: nowrap;
@@ -93,7 +96,7 @@ footer {
     font-weight: 600;
 }
 
-#rain {
+#weather_c {
     width: 300px;
     height: 188px;
     background-size: contain;
@@ -165,14 +168,19 @@ footer {
     transform: rotate(270deg)
 }
 
+.mph {
+    /* position: absolute;  */
+    margin-top: -85px;
+    margin-right: -5px;
+    align-content: center;
+ }
 
+ /* .hide{ 
+    display: none;
+  }
 /* Mobile First Rules */
 
-.mph {
-    position: absolute;
-    top: 100%;
-    left: 40%;
-}
+
 
 /* The small pictures for the summary */
 .clear {
@@ -214,36 +222,27 @@ footer {
     }
 
     .box {
-
-        display: flex;
-        justify-content: space-around;
+       display: flex;
     }
 
-    .mph {
-        position: absolute;
-        top: 55%;
-        left: 45%;
+    /* Summary images for the big screen */
+    .clear {
+        background-image: url("/weather/responsive_images/clear_large.jpg");
     }
 
-}
+    .rain {
+        background-image: url("/weather/responsive_images/rain_large.jpg");
+    }
 
-/* Summary images for the big screen */
-.clear {
-    background-image: url("/weather/responsive_images/clear_large.jpg");
-}
+    .fog {
+        background-image: url("/weather/responsive_images/fog_large.jpg");
+    }
 
-.rain {
-    background-image: url("/weather/responsive_images/rain_large.jpg");
-}
+    .snow {
+        background-image: url("/weather/responsive_images/snow_large.jpg");
+    }
 
-.fog {
-    background-image: url("/weather/responsive_images/fog_large.jpg");
-}
-
-.snow {
-    background-image: url("/weather/responsive_images/snow_large.jpg");
-}
-
-.clouds {
-    background-image: url("/weather/responsive_images/clouds_large.jpg");
+    .clouds {
+        background-image: url("/weather/responsive_images/clouds_large.jpg");
+    }
 }
