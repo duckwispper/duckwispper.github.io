@@ -20,11 +20,18 @@ html {
 }
 
 
-*,*:before,*:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "sansita", "eurostyle", sans-serif;
 }
 
@@ -84,11 +91,16 @@ footer {
 li {
     display: inline;
 }
+
 #scroll {
     display: flex;
     white-space: nowrap;
     overflow: auto;
     list-style-type: none;
+}
+
+#scroll li {
+    margin: 0 30px;
 }
 
 #site-brand {
@@ -103,7 +115,7 @@ li {
     align-self: center;
     background-repeat: no-repeat;
     justify-content: center;
-
+    margin: auto;
 }
 
 #current {
@@ -170,14 +182,15 @@ li {
 
 .mph {
     /* position: absolute;  */
-    margin-top: -85px;
+    margin-top: -105px;
     margin-right: -5px;
     align-content: center;
- }
+}
 
- /* .hide{ 
+.hide {
     display: none;
-  }
+}
+
 /* Mobile First Rules */
 
 
@@ -189,6 +202,7 @@ li {
 
 .rain {
     background-image: url("/weather/responsive_images/rain_small.jpg");
+    background-repeat: no-repeat;
 }
 
 .fog {
@@ -219,10 +233,13 @@ li {
 
     .tile {
         flex-grow: 1;
+        /* max-width: 400px; */
     }
 
     .box {
-       display: flex;
+        display: flex;
+        /* justify-content: space-around; */
+        /* flex-flow: row nowrap; */
     }
 
     /* Summary images for the big screen */
@@ -232,6 +249,8 @@ li {
 
     .rain {
         background-image: url("/weather/responsive_images/rain_large.jpg");
+        background-size: 100%;
+
     }
 
     .fog {

@@ -36,24 +36,25 @@ function fetchData(weatherURL){
     let curTemp = g.Temp;
     let high = g.High;
     let low = g.Low;
-    //See if it worked!!
-    console.log("Temp info is Current Temp: " + curTemp + ", High: " + high + ", Low: " + low);
+    //See if it worked
+    console.log("Current Temp: " + curTemp + ", High: " + high + ", Low: " + low);
 
     // Get the wind data 
     let wind = g.Wind;
     let direction = g.Direction;
     let windgusts = g.Gusts;
-    //See if it worked!!
-    console.log("Wind info is Wind speed: " + wind + ", Direction of wind: " + direction + ", Speed of gusts: " + windgusts);
+    //See if it worked
+    console.log("Wind speed: " + wind + ", Direction of wind: " + direction + ", Speed of gusts: " + windgusts);
 
     // Get the current conditions
     let summary = g.Summary;
     let precip = g.Precip;
-    //See if it worked!! 
-    console.log("Current Condition is Current weather: " + summary + ", Precipitation: " + precip);
+    //See if it worked 
+    console.log("Condition is: " + summary + ", Precipitation: " + precip);
 
     // Get the hourly data 
     let hourlyData = g.Hourly;
+    //See if it worked
     console.log("Hourly data: " + hourlyData);
 
     // ************ Display the content ******************************
@@ -100,7 +101,8 @@ function fetchData(weatherURL){
     let date = new Date(); 
     let nextHour = date.getHours() + 1;
     // Call hourly information from JSon and format using functions
-    hourlyTemp.innerHTML = buildHourlyData(nextHour, hourlyData);
+    let hourlyUL = document.getElementById("scroll");
+    hourlyUL.innerHTML = buildHourlyData(nextHour, hourlyData);
 
     // Change the status of the containers
     contentContainer.setAttribute('class', ''); // removes the hide class

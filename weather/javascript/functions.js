@@ -45,7 +45,7 @@ function buildWC(speed, temp) {
 
     // wc = 'Feels like '+wc+'&deg;F';
     feelTemp.innerHTML = wc;
-
+    return wc;
 }
 
 // Wind dial function
@@ -151,24 +151,22 @@ function getCondition(statement) {
         return condition;
     }
 }
-    //change the summary image function
-     function changeSummaryImage(condition){
-         document.getElementById('weather_c').setAttribute("class", condition);
-        return 0;
-     }
-
+    
     function changeSummaryImage(weather) {
         const weatherImages = weather;
+        let backgroundImage = document.getElementById("background-section");
         switch (weather) {
             case "clouds":
             weather_c.setAttribute("class", "clouds");
                 curWeather.setAttribute("class", "clouds");
                 document.getElementById("weathertitle").innerText = "Clouds";
+                // backgroundImage.setAttribute("class", "clouds");
                 break;
             case "rain":
             weather_c.setAttribute("class", "rain");
                 curWeather.setAttribute("class", "rain");
                 document.getElementById("weathertitle").innerText = "Rain";
+                // backgroundImage.setAttribute("class", "rain");
                 break;
             case "clear":
             weather_c.setAttribute("class", "clear");
@@ -186,7 +184,6 @@ function getCondition(statement) {
                 document.getElementById("weathertitle").innerText = "Fog";
                 break;
                 
-    changeSummaryImage(weather);
         }
     }
     
