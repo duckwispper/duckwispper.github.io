@@ -2,13 +2,14 @@
 let pageNav = document.getElementById('page-nav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('pagecontent');
-// Get the Json file
 
+// Get the Json file
 let weatherURL = "/weather/javascript/weather.json";
 fetchData(weatherURL);
 
+// The data we want from the weather.json file
 function fetchData(weatherURL) {
-  let cityName = 'Greenville'; // The data we want from the weather.json file
+  let cityName = 'Greenville'; 
   fetch(weatherURL)
     .then(function (response) {
       if (response.ok) {

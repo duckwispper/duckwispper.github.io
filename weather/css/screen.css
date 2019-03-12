@@ -138,7 +138,7 @@ li {
 #hourly {
     display: flex;
 }
-
+/* position the dial */
 #dial {
     position: relative;
     height: 150px;
@@ -147,7 +147,7 @@ li {
     z-index: 100;
     margin: -.6em auto 0;
 }
-
+/* Wind dial functions */
 .n {
     transform: rotate(0deg)
 }
@@ -230,12 +230,12 @@ li {
         padding-top: 25px;
         padding-bottom: 15px;
     }
-
+    /* To make the boxes touch one another  */
     .tile {
         flex-grow: 1;
         /* max-width: 400px; */
     }
-
+    /* To align the boxes */
     .box {
         display: flex;
         /* justify-content: space-around; */
