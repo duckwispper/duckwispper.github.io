@@ -198,23 +198,27 @@ li {
 /* The small pictures for the summary */
 .clear {
     background-image: url("/weather/responsive_images/clear_small.jpg");
+    background-size: cover;
 }
 
 .rain {
     background-image: url("/weather/responsive_images/rain_small.jpg");
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .fog {
     background-image: url("/weather/responsive_images/fog_small.jpg");
+    background-size: cover;
 }
 
 .snow {
     background-image: url("/weather/responsive_images/snow_small.jpg");
+    background-size: cover;
 }
 
 .clouds {
     background-image: url("/weather/responsive_images/clouds_small.jpg");
+    background-size: cover;
 }
 
 
@@ -236,10 +240,8 @@ li {
         /* max-width: 400px; */
     }
     /* To align the boxes */
-    .box {
+    #background-section {
         display: flex;
-        /* justify-content: space-around; */
-        /* flex-flow: row nowrap; */
     }
 
     /* Summary images for the big screen */
@@ -249,7 +251,6 @@ li {
 
     .rain {
         background-image: url("/weather/responsive_images/rain_large.jpg");
-        background-size: 100%;
 
     }
 

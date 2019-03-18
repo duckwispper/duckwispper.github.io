@@ -166,7 +166,7 @@ function getCondition(statement) {
             weather_c.setAttribute("class", "rain");
                 curWeather.setAttribute("class", "rain");
                 document.getElementById("weathertitle").innerText = "Rain";
-                // backgroundImage.setAttribute("class", "rain");
+                backgroundImage.setAttribute("class", "rain");
                 break;
             case "clear":
             weather_c.setAttribute("class", "clear");
