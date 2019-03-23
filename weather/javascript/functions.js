@@ -396,7 +396,7 @@ function buildPage() {
     let pageTitle = document.getElementById('pagetitle');
     let fullName = storage.getItem('locName') + ',' + storage.getItem('locState');
     let fullNameNode = document.createTextNode(fullName);
-    //insert to page----SHOULD BE DONE
+    //insert to page
     pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
     document.getElementById('locName').innerHTML = fullName;
     //Wind Dial/speed/direction
@@ -407,11 +407,11 @@ function buildPage() {
     let windD = storage.getItem('windDirection');
     document.getElementById('direction').innerHTML = windD;
     windDial(windD);
-    //Cur WEather Section------ SHOULD BE DONE
+    //Cur WEather Section
     let curW = storage.getItem('curWeather');
     let cond = getCondition(curW);
-    console.log('Curent Weather Condidtion is:');
-    console.log(getCondition(curW));
+   // console.log('Curent Weather Condidtion is:');
+   // console.log(getCondition(curW));
     changeSummaryImage(cond);
 
     //Temperatures
