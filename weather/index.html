@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title id="pagetitle"> | Weather Site</title>
+    <meta name="Greenville Weather" content="Weather in Greenville SC">
+    <meta name="viewport" content="width=device-width">
+    <link href="/weather/css/screen.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<!--
+     Collaboration List
+    Nicholas Wells (Thats me)
+    Victoria Greenhalgh
+    Kendrick Robinson
+ -->
+<body>
+    <header id="page-header">
+        <img id="logo" src="/weather/images/logo.jpg" alt="Picture of Umbrella" />
+        <h1 id="site-brand">The Weather Site</h1>
+    </header>
+    <nav id="page-nav">
+        <a href="/weather/index.html" title="Go to the Weather Site home page">Current</a>
+        <a href="franklin_weather.html" title="Get Weather of Franklin">Franklin</a>
+        <a href="greenville_weather.html" title="Get Weather of Greenville">Greenville</a>
+        <a href="#" title="Search">Search</a>
+    </nav>
+
+    <section id="statusMessage">Please be patient while I get your weather information.</section>
+
+    <main id="pagecontent" class="hide">
+        <h1 id="locName">Greenville, SC</h1>
+        <ul id="locInfo">
+            <li><strong>Zip: </strong>none </li>
+            <li>| <strong>Elevation: </strong><span id="elevation">294.437</span>  </li>
+            <li>| <strong>Location: </strong><span id="latLon"></span></li>
+        </ul>
+
+        <div id="curWeather"></div>
+        <section class="box" id="background-section">
+
+            <section id="temps" class="tile">
+                <h2><strong>Temperature</strong></h2>
+
+                <p id="current">40&deg;F</p>
+                <p><span id="hot">64&deg;F</span> <span id="cold">41&deg;F</span></p>
+                <p> Feels like <span id="feelTemp"></span>&deg;F</p>
+            </section>
+
+            <section id="wind" class="tile">
+                <h3><strong>Wind</strong></h3>
+                <div id="dial"></div>
+                <div class="mph">
+                    <p id="windx">5 mph</p>
+                </div>
+                <br>
+                <p>Direction: <span id="direction">SW</span></p>
+                <p>Gusts: <span id="windgusts"> </span></p>
+            </section>
+            <section id="summary" class="tile">
+                <h3 id="weathertitle"><strong></strong></h3>
+                <div id='weather_c'></div>
+                <p id="weartherforecast"></p>
+            </section>
+        </section>
+        <section id="hourlyTemps" class="tile">
+            <h2>Hourly Forecast</h2>
+            <ul id="scroll">
+                <li>10am: 41&deg;F |</li>
+                <li>11am: 41&deg;F |</li>
+                <li>12pm: 41&deg;F |</li>
+                <li>1pm: 41&deg;F |</li>
+                <li>2pm: 41&deg;F |</li>
+                <li>3pm: 41&deg;F |</li>
+                <li>4pm: 42&deg;F |</li>
+                <li>5pm: 44&deg;F |</li>
+                <li>6pm: 44&deg;F |</li>
+                <li>7pm: 46&deg;F |</li>
+                <li>8pm: 49&deg;F |</li>
+                <li>9pm: 51&deg;F |</li>
+                <li>10pm: 55&deg;F</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        &copy; 2019, The Weather Site
+    </footer>
+    <script src='/weather/javascript/functions.js'></script>
+    <script src="/weather/javascript/geo_loc.js"></script>
+</body>
+
+</html>
