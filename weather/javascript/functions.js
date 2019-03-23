@@ -407,11 +407,11 @@ function buildPage() {
     let windD = storage.getItem('windDirection');
     document.getElementById('direction').innerHTML = windD;
     windDial(windD);
-    //Cur WEather Section
+    //Cur Weather Section
     let curW = storage.getItem('curWeather');
     let cond = getCondition(curW);
-   // console.log('Curent Weather Condidtion is:');
-   // console.log(getCondition(curW));
+    console.log('Curent Weather Condidtion is:');
+    console.log(getCondition(curW));
     changeSummaryImage(cond);
 
     //Temperatures
