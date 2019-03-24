@@ -39,7 +39,7 @@ changeSummaryImage(condition);
 //  This is to calculate the wind chill
 function buildWC(speed, temp) {
 
-    const feelTemp = document.getElementById("feelTemp")
+    const feelTemp = document.getElementById("feelTemp");
 
     // Compute wind chill
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
@@ -188,6 +188,7 @@ function changeSummaryImage(weather) {
             weather_c.setAttribute("class", "snow");
             curWeather.setAttribute("class", "snow");
             document.getElementById("weathertitle").innerText = "Snow";
+            backgroundImage.setAttribute("class", "rain");
             break;
         case "fog":
             weather_c.setAttribute("class", "fog");
@@ -258,7 +259,7 @@ function getLocation(locale) {
 
             //Link to hourly data
             let hourlyLink = data.properties.forecastHourly;
-            console.log(hourlyLink)
+            console.log(hourlyLink);
             getHourly(hourlyLink);
 
             //Forcast Info
@@ -444,12 +445,12 @@ function buildPage() {
     //send to hourly data
     scroll.innerHTML = buildHourlyData(nextHour, hourlyData);
 
-    //coslog to make sure it workds
+    //coslog to make sure it works
     console.log(buildHourlyData(nextHour, hourlyData));
 
     // Detailed Forecast
     let df = storage.getItem("detailedForecast");
-    document.getElementById('weartherforecast').innerHTML = df
+    document.getElementById('weatherforecast').innerHTML = df;
 
     //WindCHill
     let speed = storage.getItem('windSpeed');
