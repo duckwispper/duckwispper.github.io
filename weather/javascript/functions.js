@@ -479,7 +479,7 @@ function buildPage() {
         longC = '&deg;W '
     }
 
-    document.getElementById('latLon').innerHTML = lat + latC + ', ' + long + longC;
+    document.getElementById('latLon').innerHTML = lat + latC + long + longC;
 
     //convert to F 
     let test = convertToFahrenheit(0);
