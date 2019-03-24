@@ -12,7 +12,7 @@
 getGeoLocation();
 
 // Setup localStorage
-var storage = window.localStorage;
+// var storage = window.localStorage;
 
 
 // Gets longitude and latitude of current location
@@ -23,6 +23,9 @@ function getGeoLocation() {
          const lat = position.coords.latitude;
          const long = position.coords.longitude;
       
+         // store
+         storage.setItem('latitude', lat);
+         storage.setItem('longitude', long);
          // Combine the values
          const locale = lat + "," + long;
          console.log(`Lat and Long are: ${locale}.`);
