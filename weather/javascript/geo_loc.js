@@ -12,7 +12,7 @@
 getGeoLocation();
 
 // Setup localStorage
-// var storage = window.localStorage;
+var storage = window.localStorage;
 
 
 // Gets longitude and latitude of current location
