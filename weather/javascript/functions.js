@@ -33,8 +33,8 @@ console.log("Feet: " + feet);
 setElevation(feet);
 
 //Current conditions function
-const condition = getCondition('Rain');
-changeSummaryImage(condition);
+//const condition = getCondition('Rain');
+//changeSummaryImage(condition);
 
 //  This is to calculate the wind chill
 function buildWC(speed, temp) {
@@ -264,7 +264,7 @@ function getLocation(locale) {
 
             //Forcast Info
             let forecastURL = data.properties.forecast;
-            console.log('did forecast url work?', forecastURL);
+            console.log('did my forecast url work?', forecastURL);
             getForecast(forecastURL);
 
             // Next, get the weather station ID before requesting current conditions 
