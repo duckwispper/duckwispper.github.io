@@ -264,7 +264,7 @@ function getLocation(locale) {
 
             //Forcast Info
             let forecastURL = data.properties.forecast;
-            console.log('did forcast url work?', forecastURL);
+            console.log('did forecast url work?', forecastURL);
             getForecast(forecastURL);
 
             // Next, get the weather station ID before requesting current conditions 
