@@ -183,17 +183,19 @@ function changeSummaryImage(weather) {
             weather_c.setAttribute("class", "clear");
             curWeather.setAttribute("class", "clear");
             document.getElementById("weathertitle").innerText = "Clear";
+            backgroundImage.setAttribute("class", "clear" );
             break;
         case "snow":
             weather_c.setAttribute("class", "snow");
             curWeather.setAttribute("class", "snow");
             document.getElementById("weathertitle").innerText = "Snow";
-            backgroundImage.setAttribute("class", "rain");
+            backgroundImage.setAttribute("class", "snow");
             break;
         case "fog":
             weather_c.setAttribute("class", "fog");
             curWeather.setAttribute("class", "fog");
             document.getElementById("weathertitle").innerText = "Fog";
+            backgroundImage.setAttribute("class", "fog");
             break;
 
     }
