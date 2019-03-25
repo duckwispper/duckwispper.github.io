@@ -322,7 +322,9 @@ function getWeather(stationId) {
             console.log('From getWeather function:');
             console.log(data);
 
+            let curW = data.properties.textDescription;
 
+            storage.setItem("curWeather", curW);
         })
         .catch(error => console.log('There was a getWeather error: ', error))
 } // end getWeather function
@@ -412,6 +414,7 @@ function buildPage() {
     windDial(windD);
     //Cur Weather Section
     let curW = storage.getItem('curWeather');
+    // console.log(curW);
     let cond = getCondition(curW);
     console.log('Curent Weather Condidtion is:');
     console.log(getCondition(curW));
