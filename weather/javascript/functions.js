@@ -385,11 +385,13 @@ function getForecast(forecastURL) {
             storage.setItem("low", low);
             storage.setItem("icon", icon);
             storage.setItem("detailedForecast", detailedForecast);
+
+            buildPage();
         })
         .catch(error => console.log("There was a getForecast error: ", error))
 }
 
-buildPage();
+// buildPage();
 
 // Populate the current location weather page
 function buildPage() {
