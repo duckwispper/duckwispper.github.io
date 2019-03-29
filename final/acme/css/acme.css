@@ -1,0 +1,84 @@
+/* CSS for ACME Site*/
+
+/* Imports */
+/* General Rules */
+
+html{
+    background-image: url("/final/acme/images/site/background.jpg");
+    background-repeat: no-repeat;
+
+}
+
+body{
+    background-color: white;
+    width: 95%;
+    margin: auto;
+}
+
+#logos{
+    width: 300px;
+    margin-left: 5px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #990033;
+    color: white;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 10px;
+    margin: 0;
+}
+
+nav ul li{
+    margin-right: 15px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 5px;
+}
+
+footer{
+    border-top: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+footer p{
+   margin: 2px 0px 0px 0px;
+}
+
+/* Larger Rules */
+@media screen and (min-width: 700px){
+    html{
+        background-size: cover;
+    }
+
+    body{
+        width:80%;
+        margin: auto; 
+    }
+
+    nav ul{
+        font-size: 20px;
+        height: 50px;
+        margin: 0px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+    footer{
+        font-size: 15px;
+    }
+}
