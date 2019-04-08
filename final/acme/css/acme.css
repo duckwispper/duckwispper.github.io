@@ -1,6 +1,7 @@
 /* CSS for ACME Site*/
 
 /* Imports */
+@import url('/weather/css/normalize.css');
 /* General Rules */
 
 html{
@@ -9,6 +10,11 @@ html{
 
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 body{
     background-color: white;
     width: 95%;
@@ -24,7 +30,7 @@ nav ul{
     display: flex;
     align-items: center;
     height: 40px;
-    background-color: #990033;
+    background-color: #de2226;
     color: white;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -51,12 +57,63 @@ footer{
     text-align: center;
     font-size: 11px;
     margin-top: 5px;
+    margin-bottom: 35px;
 }
 
 footer p{
    margin: 2px 0px 0px 0px;
 }
 
+#nav_bar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* changes size and bullet points */
+    list-style: none;
+    font-size: 1.5em;
+}
+
+.rocket_pic {
+    background-image: url('/final/acme/images/site/feature.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    color: #990033;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rint {
+    height: 600px;
+    padding-right: 35px;
+}
+
+#rheader {
+    font-size: 50px;
+}
+
+.rlist {
+    font-size: 26px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.food{
+border-left-width : 40px;
+border-right-width : 40px;
+border-bottom-width : 10px;
+border-color : lightgray;
+border-style : solid;
+width : 5em;
+}
+
+#list{
+    font-size: 25px;
+}
+
+.hide {
+	display: none;
+}
 /* Larger Rules */
 @media screen and (min-width: 700px){
     html{
@@ -81,4 +138,23 @@ footer p{
     footer{
         font-size: 15px;
     }
+}
+
+#recipes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#end_content{
+		display: flex;
+		flex-direction: row-reverse;
+}
+
+#reviews{
+    width: 55%;
+}
+
+#foods{
+    width: 45%;
 }
