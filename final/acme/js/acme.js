@@ -1,8 +1,7 @@
 console.log('My Java is working');
 var page ='';
 
-
-//Fetching the Data//
+//Fetch the Data//
 let urlJSON = "/final/acme/js/acme.json";
 fetchData(urlJSON);
 
@@ -18,7 +17,6 @@ fetch(urlJSON)
    //Check the data object was retrieved
    console.log(data);
    //create and hold array
-// Create an array to hold nav items
 let navItem = [];
 for(let i = 0; i < data.Navigation.navData.length; i++){
     navItem[i] = data.Navigation.navData[i];
@@ -44,20 +42,20 @@ for(let i = 0; i < navItem.length; i++){
     //puts li in ul to create nav
     ul.appendChild(li);
 }
-//engage listeners
+//listeners
 clickListeners();
 }
 function clickListeners(){
-  //when clicked will call home function
+  //when clicked will call home 
   document.getElementById("navHome").addEventListener("click", clickHome);
 
-  //when clicked will call navClick() function
-  let anvils = document.querySelector("#navAnvils");//This selects the css selector 'navAnvils' that we made with JS above
+  //when Anvils are clicked, will call navClick() function
+  let anvils = document.querySelector("#navAnvils");
   anvils.addEventListener('click', navClick);
   anvils.myParam = 'Anvils';
 
-   //when clicked will call navClick() function
-   let explosives = document.querySelector("#navExplosives");//This selects the css selector 'navExplosives' that we made with JS above
+   //When Explosives is clicked, call navClick() function
+   let explosives = document.querySelector("#navExplosives");
    explosives.addEventListener('click', navClick);
    explosives.myParam = 'Explosives';
 
@@ -75,34 +73,32 @@ function clickListeners(){
 }
 function clickHome(){
   //Displays home page
-  document.getElementById('content_title').setAttribute('class', '');
+  document.getElementById('section1').setAttribute('class', '');
   document.getElementById('sale_items').setAttribute('class', 'hide');
-  document.getElementById('pageTitle').innerHTML = 'Home | Acme Products';
+  document.getElementById('page_title').innerHTML = 'Home | Acme Products';
 }
 function navClick(event){
-  fetch(URL)
+  fetch(urlJSON)
     .then(function(response){
       if(response.ok){
         return response.json();
       }
-      throw new Error('Network response was not OK.');
+      throw new Error('Network response did not work');
     })
     .then(function(data){
-      //hide mainContent and show new
-      document.getElementById('content_title').setAttribute('class', "hide");
+      //hide section1 and show new
+      document.getElementById('section1').setAttribute('class', "hide");
       document.getElementById('sale_items').setAttribute('class','');
 
-      //Set t to data.event's parameter passed from click event (Explosives, Traps, etc)
-      let o = data[event.target.myParam];
-      let q =data
+      let d = data[event.target.myParam];
 //sets classes to item to display other pages
-            document.getElementById("productTitle").innerHTML = o.name;
-            document.getElementById("productPicture").setAttribute("src", o.path);
-            document.getElementById("productDescription").innerHTML = o.description;
-            document.getElementById("productManufacturer").innerHTML = o.manufacturer;
-            document.getElementById("productReviews").innerHTML = o.reviews + "/5 stars";
-            document.getElementById("productPrice").innerHTML = "Price: $" + o.price;
-            document.getElementById('page_title').innerHTML = o.name +' | Acme Products';
+            document.getElementById("productTitle").innerHTML = d.name;
+            document.getElementById("productPicture").setAttribute("src", d.path);
+            document.getElementById("productDescription").innerHTML = d.description;
+            document.getElementById("pruductManufacturer").innerHTML = d.manufacturer;
+            document.getElementById("productReviews").innerHTML = d.reviews + "/5 stars";
+            document.getElementById("productPrice").innerHTML = "Price: $" + d.price;
+            document.getElementById('page_title').innerHTML = d.name +' | Acme Products';
 
     })
   }

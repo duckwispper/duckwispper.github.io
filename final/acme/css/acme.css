@@ -75,12 +75,14 @@ footer p{
 
 .rocket_pic {
     background-image: url('/final/acme/images/site/feature.jpg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     width: auto;
     color: #990033;
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    /* background-color: #59c9ef; */
 }
 
 .rint {
@@ -114,8 +116,30 @@ width : 5em;
 .hide {
 	display: none;
 }
+
+#productPrice{
+    color:#de2226;
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+#productDescription{
+    font-size: 2em;
+    padding: 20px;
+}
+
+#pruductManufacturer{
+    font-size: 2em;
+    padding: 20px;
+}
+
+#productReviews{
+    font-size: 2em;
+    padding: 20px;
+}
+
 /* Larger Rules */
-@media screen and (min-width: 700px){
+@media screen and (min-width: 1000px){
     html{
         background-size: cover;
     }
@@ -125,6 +149,9 @@ width : 5em;
         margin: auto; 
     }
 
+    #contents{
+        display: flex;
+    }
     nav ul{
         font-size: 20px;
         height: 50px;
@@ -138,7 +165,6 @@ width : 5em;
     footer{
         font-size: 15px;
     }
-}
 
 #recipes{
     display: flex;
@@ -157,4 +183,9 @@ width : 5em;
 
 #foods{
     width: 45%;
+}
+
+.rocket_pic {
+    background-size: cover;
+}
 }
