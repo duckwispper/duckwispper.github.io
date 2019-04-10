@@ -82,7 +82,8 @@ footer p{
     display: flex;
     justify-content: flex-end;
     position: relative;
-    /* background-color: #59c9ef; */
+    width:100%;
+    height: 100%;
 }
 
 .rint {
